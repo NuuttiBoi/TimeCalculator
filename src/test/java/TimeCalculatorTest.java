@@ -26,4 +26,16 @@ public class TimeCalculatorTest {
             calculator.calculateTime(100, -10);
         });
     }
+
+
+    @Test
+    public void testCalculateTimeMiles() {
+        TimeCalculator calculator = new TimeCalculator();
+        double distance = 100.0;  // miles
+        double speed = 50.0;      // miles per hour
+        double expectedTime = 2.0; // hours
+        double actualTime = calculator.calculateTimeDifUnits(distance, speed, TimeCalculator.Unit.MILES, TimeCalculator.Unit.MILES);
+        assertEquals(expectedTime, actualTime,0.0001);
+    }
+
 }
