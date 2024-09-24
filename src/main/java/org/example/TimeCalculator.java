@@ -48,5 +48,9 @@ public class TimeCalculator {
         return distance / speed;
 
     }
+    public static void main(String[]args){
+        TimeCalculator calculator = new TimeCalculator();
+        System.out.println(calculator.calculateTime(20.0,19.0));
+    }
 }
 
